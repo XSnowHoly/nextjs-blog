@@ -2,16 +2,16 @@ import {Column, CreateDateColumn, Entity, ManyToOne, OneToMany, OneToOne, Primar
 import { Post } from "./Post";
 import { User } from "./User";
 
-@Entity()
+@Entity('comments')
 export class Comment {
   @PrimaryGeneratedColumn('increment')
   id: number;
   @Column('text')
   content: string;
-  @CreateDateColumn('time')
+  @CreateDateColumn()
   createdAt: Date;
-  @UpdateDateColumn('time')
-  uodateAt: Date;
+  @UpdateDateColumn()
+  updatedAt: Date;
 
   @ManyToOne(type => User, user => user.comments)
   user: User;

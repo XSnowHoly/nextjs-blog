@@ -5,7 +5,7 @@ export class RenameColumns1607301823638 implements MigrationInterface {
     await queryRunner.renameColumn(
       'users',
       'password_digest',
-      'passwordDisgest',
+      'passwordDigest',
     );
     await queryRunner.renameColumn('posts', 'author_id', 'authorId');
     await queryRunner.renameColumn('comments', 'user_id', 'userId');
@@ -15,7 +15,7 @@ export class RenameColumns1607301823638 implements MigrationInterface {
   public async down(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.renameColumn(
       'users',
-      'passwordDisgest',
+      'passwordDigest',
       'password_digest',
     );
     await queryRunner.renameColumn('posts', 'authorId', 'author_id');

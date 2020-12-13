@@ -29,7 +29,7 @@ var RenameColumns1607301823638 = /*#__PURE__*/function () {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return queryRunner.renameColumn('users', 'password_digest', 'passwordDisgest');
+                return queryRunner.renameColumn('users', 'password_digest', 'passwordDigest');
 
               case 2:
                 _context.next = 4;
@@ -66,7 +66,7 @@ var RenameColumns1607301823638 = /*#__PURE__*/function () {
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.next = 2;
-                return queryRunner.renameColumn('users', 'passwordDisgest', 'password_digest');
+                return queryRunner.renameColumn('users', 'passwordDigest', 'password_digest');
 
               case 2:
                 _context2.next = 4;

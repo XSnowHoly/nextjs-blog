@@ -1,5 +1,15 @@
 # 初始代码
 
+## 进入 docker 容器
+```
+docker exec -it 容器ID bash
+```
+
+## 进入 pg 命令行
+```
+psql -U blog -w
+```
+
 ## 启动数据库
 
 ```

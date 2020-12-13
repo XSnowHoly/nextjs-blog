@@ -2,7 +2,7 @@ import {Column, CreateDateColumn, Entity, ManyToOne, OneToMany, PrimaryGenerated
 import { User } from "./User";
 import { Comment } from './Comment'
 
-@Entity()
+@Entity('posts')
 export class Post {
   @PrimaryGeneratedColumn('increment')
   id: number;
@@ -12,10 +12,10 @@ export class Post {
   content: string;
   @Column('int')
   authorId: number;
-  @CreateDateColumn('time')
+  @CreateDateColumn()
   createdAt: Date;
-  @UpdateDateColumn('time')
-  updateAt: Date;
+  @UpdateDateColumn()
+  updatedAt: Date;
 
   @ManyToOne(type => User, user => user.posts)
   author: User;
